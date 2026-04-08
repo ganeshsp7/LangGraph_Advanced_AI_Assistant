@@ -18,11 +18,6 @@ class ChatState(TypedDict):
 
 def chat_node(state: ChatState): 
     messages = state['messages']
-
-    print("\n\n\nSTATE IN NODE:", state)
-    print("*****************************************************")
-    print("\n\n\nSTATE messages:", messages)
-    print("*****************************************************")
     llm = ChatOllama(model="llama3.1:8b")
     response = llm.invoke(messages)
     return {"messages": [response]}
