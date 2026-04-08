@@ -37,10 +37,7 @@ if user_input:
         config = CONFIG
     )    
 
-    print("/n/n hi hi")
-
-
-    print(response)
+    # print(response)
 
     AI_message = response['messages'][-1].content
 
